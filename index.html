@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sourin Banerjee — BIM Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0e14;--surface:#111620;--surface2:#161d2a;--accent:#00d4ff;--accent2:#ff6b35;--accent3:#a8ff3e;--text:#e8edf5;--muted:#6b7a99;--border:rgba(0,212,255,0.15);--glow:0 0 40px rgba(0,212,255,0.12);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:18px 60px;background:rgba(10,14,20,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:3px;color:var(--accent);}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;font-family:'DM Mono',monospace;transition:color 0.3s;}
+.nav-links a:hover{color:var(--accent);}
+.nav-hire-btn{padding:9px 20px;background:var(--accent);color:var(--bg);font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;font-weight:500;transition:all 0.3s;white-space:nowrap;}
+.nav-hire-btn:hover{background:#fff;}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.nav-hamburger span{width:24px;height:2px;background:var(--accent);transition:all 0.3s;display:block;}
+.nav-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.mobile-menu{display:none;position:fixed;top:58px;left:0;right:0;background:rgba(10,14,20,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);z-index:199;flex-direction:column;padding:16px 24px;gap:0;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04);transition:color 0.2s;}
+.mobile-menu a:hover{color:var(--accent);}
+.mobile-hire-link{margin-top:12px;padding:14px!important;background:var(--accent);color:var(--bg)!important;text-align:center;font-weight:500;border-bottom:none!important;}
+
+.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:120px 60px 80px;position:relative;overflow:hidden;gap:60px;background:radial-gradient(circle at top right,rgba(0,212,255,0.09),transparent 40%);flex-wrap:wrap;}
+.hero-left{flex:1;min-width:280px;max-width:560px;z-index:1;}
+.hero-watermark{position:absolute;bottom:-60px;left:0;font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,14vw,14rem);line-height:1;color:rgba(0,212,255,0.05);letter-spacing:12px;z-index:0;pointer-events:none;user-select:none;white-space:nowrap;}
+.hero-bg-circle{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,255,0.04) 0%,transparent 70%);right:-150px;top:50%;transform:translateY(-50%);pointer-events:none;}
+.hero-tag{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--accent);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+.hero-tag::before{content:'';width:30px;height:1px;background:var(--accent);}
+.pulse-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent3);margin-right:8px;animation:pulse 2s ease-in-out infinite;flex-shrink:0;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(0.8);}}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.8rem,9vw,9rem);line-height:0.9;letter-spacing:2px;margin-bottom:26px;}
+h1 .accent{color:var(--accent);}
+h1 .accent2{color:var(--accent2);}
+.hero-desc{font-size:0.93rem;color:var(--muted);max-width:460px;margin-bottom:34px;line-height:1.85;}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{padding:13px 28px;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all 0.3s;display:inline-block;}
+.btn-primary{background:var(--accent);color:var(--bg);font-weight:500;}
+.btn-primary:hover{background:#fff;transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,212,255,0.3);}
+.btn-outline{background:transparent;color:var(--accent);border:1px solid var(--accent);}
+.btn-outline:hover{background:rgba(0,212,255,0.08);transform:translateY(-2px);}
+.hero-photo-panel{display:flex;gap:18px;align-items:flex-start;position:relative;z-index:1;flex-shrink:0;}
+.photo-frame{width:clamp(240px,32vw,380px);height:clamp(280px,42vw,500px);margin-top:20px;border:none;position:relative;overflow:hidden;box-shadow:0 0 40px rgba(0,212,255,0.18);}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:contrast(1.05),opacity(0.92);}
+.photo-frame::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(10,14,20,0.45));z-index:1;}
+.hero-stats{display:flex;flex-direction:column;gap:10px;}
+.stat-card{background:var(--surface);border:1px solid var(--border);padding:15px 18px;width:190px;position:relative;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;}
+.stat-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent);}
+.stat-card:nth-child(2)::before{background:var(--accent2);}
+.stat-card:nth-child(3)::before{background:var(--accent3);}
+.stat-card:hover{transform:translateX(-4px);box-shadow:var(--glow);}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;color:var(--accent);line-height:1;}
+.stat-card:nth-child(2) .stat-num{color:var(--accent2);}
+.stat-card:nth-child(3) .stat-num{color:var(--accent3);}
+.stat-label{font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
+
+section{padding:88px 60px;position:relative;z-index:1;}
+.section-header{display:flex;align-items:baseline;gap:18px;margin-bottom:50px;flex-wrap:wrap;}
+.section-num{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent);letter-spacing:2px;}
+h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,4rem);letter-spacing:2px;line-height:1;}
+.section-line{flex:1;height:1px;background:var(--border);margin-left:auto;max-width:300px;min-width:30px;}
+.sep{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0.22;}
+
+/* ABOUT */
+.about-section{background:var(--surface);}
+.about-grid{display:grid;grid-template-columns:290px 1fr;gap:52px;align-items:start;}
+.about-photo-col{display:flex;flex-direction:column;gap:18px;}
+.about-photo-frame{width:100%;aspect-ratio:3/4;border:1px solid var(--accent);overflow:hidden;position:relative;box-shadow:8px 8px 0 var(--accent2),0 0 40px rgba(0,212,255,0.1);}
+.about-photo-frame img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:contrast(1.05);}
+.about-photo-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 65%,rgba(10,14,20,0.5));}
+.about-chips{display:flex;flex-wrap:wrap;gap:8px;}
+.about-chip{display:flex;align-items:center;gap:7px;padding:7px 12px;background:var(--bg);border:1px solid var(--border);font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.5px;}
+.about-chip .ci{color:var(--accent);}
+.about-btn{display:flex;align-items:center;justify-content:center;gap:9px;padding:13px 18px;font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;border:none;width:100%;}
+.about-btn-primary{background:var(--accent);color:var(--bg);font-weight:500;}
+.about-btn-primary:hover{background:#fff;transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,212,255,0.22);}
+.about-btn-outline{background:transparent;color:var(--accent);border:1px solid var(--accent);}
+.about-btn-outline:hover{background:rgba(0,212,255,0.07);transform:translateY(-2px);}
+.about-content{display:flex;flex-direction:column;gap:26px;}
+.about-quote{border-left:3px solid var(--accent);padding-left:18px;font-style:italic;color:var(--muted);font-size:0.88rem;line-height:1.85;}
+.about-quote strong{color:var(--accent);font-style:normal;font-weight:500;}
+.about-intro{font-size:0.92rem;color:var(--muted);line-height:1.9;}
+.about-intro b{color:var(--text);font-weight:500;}
+.about-traits{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;}
+.trait-card{background:var(--bg);border:1px solid var(--border);padding:18px;position:relative;overflow:hidden;transition:border-color 0.3s,transform 0.3s;}
+.trait-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--accent);}
+.trait-card:nth-child(2)::before{background:var(--accent2);}
+.trait-card:nth-child(3)::before{background:var(--accent3);}
+.trait-card:nth-child(4)::before{background:#c084fc;}
+.trait-card:hover{border-color:var(--accent);transform:translateY(-4px);}
+.trait-icon{font-size:1.35rem;margin-bottom:8px;display:block;}
+.trait-title{font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--text);margin-bottom:4px;}
+.trait-desc{font-size:0.74rem;color:var(--muted);line-height:1.6;}
+.about-highlights{display:flex;flex-direction:column;gap:7px;}
+.about-hl{display:flex;align-items:flex-start;gap:10px;font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--text);line-height:1.65;}
+.about-hl::before{content:'▹';color:var(--accent);flex-shrink:0;}
+
+/* CV MODAL */
+.cv-modal-overlay{display:none;position:fixed;inset:0;background:rgba(5,8,14,0.97);z-index:999;align-items:center;justify-content:center;padding:16px;}
+.cv-modal-overlay.active{display:flex;}
+.cv-modal-wrapper{width:min(880px,100%);max-height:95vh;display:flex;flex-direction:column;box-shadow:0 0 80px rgba(0,212,255,0.16);}
+.cv-modal-bar{display:flex;gap:10px;padding:13px 18px;background:var(--surface);border-bottom:1px solid var(--border);align-items:center;flex-wrap:wrap;flex-shrink:0;}
+.cv-btn{padding:8px 18px;font-family:'DM Mono',monospace;font-size:0.66rem;letter-spacing:2px;cursor:pointer;transition:all 0.2s;border:none;white-space:nowrap;}
+.cv-btn-p{background:var(--accent);color:var(--bg);font-weight:500;}
+.cv-btn-p:hover{background:#fff;}
+.cv-btn-o{background:transparent;color:var(--accent);border:1px solid var(--accent);}
+.cv-btn-o:hover{background:rgba(0,212,255,0.07);}
+.cv-btn-x{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.1);margin-left:auto;}
+.cv-btn-x:hover{border-color:#ff6b6b;color:#ff6b6b;}
+.cv-scroll{overflow-y:auto;background:#fff;flex:1;}
+.cv-doc{font-family:'DM Sans',sans-serif;font-weight:300;color:#1a1a2e;background:#fff;}
+.cv-hdr{background:#0a0e14;color:#e8edf5;padding:34px 44px 28px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;}
+.cv-hdr-photo{width:96px;height:96px;border-radius:50%;border:3px solid #00d4ff;object-fit:cover;object-position:top center;flex-shrink:0;}
+.cv-hdr-name{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:3px;line-height:1;color:#fff;}
+.cv-hdr-role{font-family:'DM Mono',monospace;font-size:0.72rem;color:#00d4ff;letter-spacing:2.5px;text-transform:uppercase;margin-top:5px;}
+.cv-hdr-contacts{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:11px;}
+.cv-hdr-c{font-family:'DM Mono',monospace;font-size:0.6rem;color:#a0aec0;letter-spacing:0.5px;}
+.cv-body{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.cv-col{padding:26px 34px;}
+.cv-col-l{border-right:1px solid #e2e8f0;}
+.cv-st{font-family:'DM Mono',monospace;font-size:0.56rem;letter-spacing:3px;text-transform:uppercase;color:#00a8cc;margin-bottom:13px;padding-bottom:5px;border-bottom:2px solid #0a0e14;margin-top:20px;}
+.cv-st:first-child{margin-top:0;}
+.cv-summary{font-size:0.78rem;color:#374151;line-height:1.8;margin-bottom:6px;}
+.cv-exp{margin-bottom:17px;}
+.cv-exp-t{font-size:0.84rem;font-weight:500;color:#1a1a2e;}
+.cv-exp-o{font-family:'DM Mono',monospace;font-size:0.6rem;color:#00a8cc;letter-spacing:1px;margin:2px 0 5px;}
+.cv-exp-d{font-size:0.74rem;color:#374151;line-height:1.7;}
+.cv-sg{margin-bottom:16px;}
+.cv-sg-n{font-size:0.74rem;font-weight:500;color:#111827;margin-bottom:5px;}
+.cv-pills{display:flex;flex-wrap:wrap;gap:4px;}
+.cv-pill{padding:2px 8px;background:#e2e8f0;font-family:'DM Mono',monospace;font-size:0.56rem;color:#1e293b;letter-spacing:0.5px;}
+.cv-edu{margin-bottom:13px;}
+.cv-edu-d{font-size:0.82rem;font-weight:500;color:#1a1a2e;}
+.cv-edu-s{font-family:'DM Mono',monospace;font-size:0.6rem;color:#4b5563;margin:2px 0;}
+.cv-edu-g{font-size:0.68rem;color:#00a8cc;}
+.cv-ach{font-size:0.74rem;color:#374151;display:flex;align-items:flex-start;gap:7px;margin-bottom:7px;line-height:1.6;}
+.cv-ach::before{content:'▹';color:#00a8cc;flex-shrink:0;font-size:0.66rem;margin-top:2px;}
+.cv-foot{background:#0a0e14;color:#6b7a99;font-family:'DM Mono',monospace;font-size:0.56rem;letter-spacing:1px;padding:11px 44px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:5px;}
+
+/* SKILLS */
+.skills-section{background:var(--surface);}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2px;}
+.skill-group{background:var(--bg);padding:26px;border:1px solid transparent;transition:border-color 0.3s,transform 0.3s;}
+.skill-group:hover{border-color:var(--accent);transform:translateY(-4px);}
+.skill-group-title{font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.skill-group-title::after{content:'';flex:1;height:1px;background:var(--border);}
+.skill-tags{display:flex;flex-wrap:wrap;gap:7px;}
+.skill-tag{padding:5px 12px;background:var(--surface2);border:1px solid var(--border);font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--text);letter-spacing:0.5px;transition:all 0.2s;}
+.skill-tag:hover{background:rgba(0,212,255,0.08);border-color:var(--accent);color:var(--accent);}
+.skill-tag.hot{border-color:var(--accent2);color:var(--accent2);background:rgba(255,107,53,0.06);}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:20px;}
+.project-card{background:var(--surface);border:1px solid var(--border);overflow:hidden;transition:all 0.4s;position:relative;}
+.project-card:hover{border-color:var(--accent);transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,0.4),var(--glow);}
+.project-card.featured{grid-column:1 / -1;}
+.project-card-header{padding:16px 20px 13px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:7px;}
+.project-type{font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;padding:3px 9px;border:1px solid;}
+.type-bim{color:var(--accent);border-color:var(--accent);background:rgba(0,212,255,0.06);}
+.type-steel{color:#c084fc;border-color:#c084fc;background:rgba(192,132,252,0.06);}
+.type-software{color:var(--accent2);border-color:var(--accent2);background:rgba(255,107,53,0.06);}
+.project-year{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted);}
+.img-gallery{display:flex;flex-wrap:wrap;gap:9px;padding:12px 20px;}
+.img-thumb{width:78px;height:60px;overflow:hidden;cursor:pointer;border:1px solid var(--border);position:relative;transition:all 0.2s;flex-shrink:0;}
+.img-thumb:hover{border-color:var(--accent);transform:translateY(-2px);}
+.img-thumb img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s;}
+.img-thumb:hover img{transform:scale(1.08);}
+.img-thumb::after{content:'⤢';position:absolute;bottom:3px;right:5px;font-size:0.62rem;color:var(--accent);opacity:0;transition:opacity 0.2s;}
+.img-thumb:hover::after{opacity:1;}
+.project-preview{width:100%;height:360px;overflow:hidden;border-bottom:1px solid var(--border);background:#0a0e14;display:block;position:relative;}
+.project-preview img,.project-preview svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.88) contrast(1.06);transition:transform 0.4s ease,filter 0.4s ease;}
+.project-card:hover .project-preview img,.project-card:hover .project-preview svg{transform:scale(1.03);filter:brightness(0.96) contrast(1.08);}
+/* SVG images — use <img> tag so they scale like raster images */
+.project-preview-svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+.project-body{padding:18px 20px 22px;}
+.project-title{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:1px;margin-bottom:7px;}
+.project-desc{font-size:0.8rem;color:var(--muted);line-height:1.8;margin-bottom:18px;}
+.project-highlights{list-style:none;display:flex;flex-direction:column;gap:5px;margin-bottom:14px;}
+.project-highlights li{font-family:'DM Mono',monospace;font-size:0.66rem;color:var(--text);display:flex;align-items:flex-start;gap:8px;line-height:1.5;}
+.project-highlights li::before{content:'→';color:var(--accent);flex-shrink:0;}
+.project-tech{display:flex;flex-wrap:wrap;gap:5px;}
+.tech-pill{padding:3px 9px;background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.2);font-family:'DM Mono',monospace;font-size:0.57rem;color:var(--accent);letter-spacing:1px;}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(5,8,14,0.97);z-index:1000;align-items:center;justify-content:center;flex-direction:column;gap:13px;padding:20px;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:76vh;object-fit:contain;border:1px solid var(--accent);box-shadow:0 0 80px rgba(0,212,255,0.18);}
+.lb-controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center;}
+.lb-btn{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:8px 16px;font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:2px;cursor:pointer;transition:all 0.2s;}
+.lb-btn:hover{border-color:var(--accent);color:var(--accent);}
+.lb-counter{font-family:'DM Mono',monospace;font-size:0.66rem;color:var(--muted);}
+.lb-caption{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted);letter-spacing:1px;}
+
+/* EDUCATION */
+.education-section{background:var(--surface);}
+.edu-timeline{position:relative;padding-left:34px;}
+.edu-timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,var(--accent),transparent);}
+.edu-item{position:relative;margin-bottom:26px;padding:20px 24px;background:var(--bg);border:1px solid var(--border);transition:border-color 0.3s;}
+.edu-item:hover{border-color:var(--accent);}
+.edu-item::before{content:'';position:absolute;left:-40px;top:24px;width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);box-shadow:0 0 10px rgba(0,212,255,0.5);}
+.edu-year{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--accent);letter-spacing:2px;margin-bottom:4px;}
+.edu-degree{font-size:0.93rem;font-weight:500;margin-bottom:3px;}
+.edu-school{font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--muted);}
+.edu-gpa{display:inline-block;margin-top:7px;padding:3px 10px;background:rgba(168,255,62,0.08);border:1px solid rgba(168,255,62,0.3);font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--accent3);letter-spacing:1px;}
+.cert-card{background:var(--bg);border:1px solid var(--border);padding:16px 20px;display:flex;align-items:center;gap:13px;transition:all 0.3s;}
+.cert-card:hover{border-color:var(--accent);transform:translateX(6px);}
+.cert-icon{width:38px;height:38px;background:rgba(0,212,255,0.08);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.cert-name{font-size:0.84rem;font-weight:500;margin-bottom:3px;}
+.cert-org{font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);letter-spacing:1px;}
+
+/* ACHIEVEMENTS */
+.achievements-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:13px;}
+.achievement-card{background:var(--surface);border:1px solid var(--border);padding:24px 16px;text-align:center;transition:all 0.3s;position:relative;overflow:hidden;}
+.achievement-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transition:transform 0.3s;}
+.achievement-card:hover::after{transform:scaleX(1);}
+.achievement-card:hover{transform:translateY(-4px);}
+.achievement-icon{font-size:1.8rem;margin-bottom:9px;display:block;}
+.achievement-title{font-family:'DM Mono',monospace;font-size:0.66rem;color:var(--text);letter-spacing:1px;line-height:1.5;}
+.achievement-detail{font-size:0.7rem;color:var(--muted);margin-top:4px;}
+
+/* CONTACT */
+.contact-section{background:var(--surface);text-align:center;}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:13px;max-width:900px;margin:40px auto 0;text-align:left;}
+.contact-item{background:var(--bg);border:1px solid var(--border);padding:20px;transition:all 0.3s;text-decoration:none;color:inherit;display:block;}
+.contact-item:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:var(--glow);}
+.contact-label{font-family:'DM Mono',monospace;font-size:0.57rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;}
+.contact-value{font-size:0.8rem;color:var(--text);word-break:break-all;}
+
+footer{padding:26px 60px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1;flex-wrap:wrap;gap:8px;}
+footer p{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted);letter-spacing:1px;}
+
+.fade-in{opacity:0;transform:translateY(26px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade-in.visible{opacity:1;transform:translateY(0);}
+
+/* ── ENHANCED ANIMATIONS ── */
+
+/* Custom cursor */
+#cursor-dot{position:fixed;width:8px;height:8px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:opacity 0.3s;mix-blend-mode:screen;}
+#cursor-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(0,212,255,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width 0.2s,height 0.2s,border-color 0.2s;mix-blend-mode:screen;}
+body:hover #cursor-dot{opacity:1;}
+a:hover ~ #cursor-ring, button:hover ~ #cursor-ring{width:48px;height:48px;border-color:var(--accent);}
+
+/* Canvas particles */
+#particle-canvas{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0.55;}
+
+/* Typed text cursor blink */
+.typed-cursor{display:inline-block;width:3px;height:0.8em;background:var(--accent);margin-left:4px;animation:blink 0.9s step-end infinite;vertical-align:middle;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+
+/* Glitch effect on h1 */
+.glitch{position:relative;}
+.glitch::before,.glitch::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;font-family:inherit;font-size:inherit;font-weight:inherit;line-height:inherit;letter-spacing:inherit;}
+.glitch::before{color:var(--accent2);clip-path:polygon(0 20%,100% 20%,100% 40%,0 40%);transform:translate(-3px,0);animation:glitch-a 4s infinite linear;}
+.glitch::after{color:var(--accent);clip-path:polygon(0 60%,100% 60%,100% 80%,0 80%);transform:translate(3px,0);animation:glitch-b 4s infinite linear;}
+@keyframes glitch-a{0%,90%,100%{transform:translate(0);opacity:0;}91%{transform:translate(-4px,1px);opacity:0.7;}93%{transform:translate(3px,-1px);opacity:0.5;}95%{transform:translate(-2px,2px);opacity:0.7;}97%{transform:translate(0);opacity:0;}}
+@keyframes glitch-b{0%,88%,100%{transform:translate(0);opacity:0;}89%{transform:translate(4px,-2px);opacity:0.6;}91%{transform:translate(-3px,1px);opacity:0.4;}93%{transform:translate(2px,-1px);opacity:0.6;}95%{transform:translate(0);opacity:0;}}
+
+/* Scanline reveal for sections */
+@keyframes scanReveal{0%{clip-path:inset(0 0 100% 0);}100%{clip-path:inset(0 0 0% 0);}}
+.scan-reveal{animation:scanReveal 0.7s cubic-bezier(0.22,1,0.36,1) both;}
+
+/* Counter number animation */
+.stat-num[data-target]{transition:color 0.3s;}
+
+/* Neon border pulse on project cards hover */
+.project-card{transition:all 0.4s,box-shadow 0.4s;}
+.project-card:hover{box-shadow:0 0 0 1px var(--accent),0 20px 60px rgba(0,0,0,0.4),0 0 40px rgba(0,212,255,0.15);}
+
+/* Section number glitch-flash */
+.section-num{position:relative;display:inline-block;}
+.section-num.flash{animation:numFlash 0.6s ease;}
+@keyframes numFlash{0%{color:var(--accent);}30%{color:var(--accent2);text-shadow:0 0 12px var(--accent2);}60%{color:var(--accent3);text-shadow:0 0 12px var(--accent3);}100%{color:var(--accent);}}
+
+/* Blueprint grid draw-in for nav */
+nav{animation:slideDown 0.6s cubic-bezier(0.22,1,0.36,1) both;}
+@keyframes slideDown{from{transform:translateY(-100%);opacity:0;}to{transform:translateY(0);opacity:1;}}
+
+/* Hero elements stagger in */
+.hero-tag{animation:fadeUp 0.7s 0.3s both ease;}
+.hero h1{animation:fadeUp 0.7s 0.5s both ease;}
+.hero-desc{animation:fadeUp 0.7s 0.7s both ease;}
+.hero-cta{animation:fadeUp 0.7s 0.9s both ease;}
+.photo-frame{animation:fadeRight 0.9s 0.6s both cubic-bezier(0.22,1,0.36,1);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(40px);}to{opacity:1;transform:translateX(0);}}
+
+/* Non-featured project cards get taller preview so SVG heroes are readable */
+.project-card:not(.featured) .project-preview{height:460px;}
+.skill-tag{position:relative;overflow:hidden;}
+.skill-tag::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(0,212,255,0.15),transparent);transform:translateX(-100%);transition:transform 0s;}
+.skill-tag:hover::after{transform:translateX(100%);transition:transform 0.4s ease;}
+
+/* Achievement card count-up glow */
+.achievement-card.revealed .achievement-icon{animation:iconPop 0.5s cubic-bezier(0.34,1.56,0.64,1);}
+@keyframes iconPop{0%{transform:scale(0.5);opacity:0;}100%{transform:scale(1);opacity:1;}}
+
+/* Contact item slide-in */
+.contact-item{transition:all 0.3s,box-shadow 0.3s;}
+.contact-item:hover{box-shadow:inset 3px 0 0 var(--accent),var(--glow);}
+
+/* Edu timeline line draw animation */
+.edu-timeline::before{animation:lineGrow 1.5s 0.5s cubic-bezier(0.22,1,0.36,1) both;}
+@keyframes lineGrow{from{transform:scaleY(0);transform-origin:top;}to{transform:scaleY(1);transform-origin:top;}}
+
+/* Typing scramble on section headers */
+@keyframes scramble{0%{opacity:0.3;}50%{opacity:0.7;}100%{opacity:1;}}
+
+/* Stat card entrance */
+.stat-card{opacity:0;transform:translateX(20px);}
+.stat-card.visible{opacity:1;transform:translateX(0);transition:opacity 0.5s ease,transform 0.5s ease,box-shadow 0.3s,border-color 0.3s;}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  nav{padding:16px 32px;}
+  .nav-links{gap:20px;}
+  section{padding:70px 40px;}
+  .hero{padding:100px 40px 70px;gap:40px;}
+  .about-grid{grid-template-columns:250px 1fr;gap:38px;}
+  .stat-card{width:170px;}
+}
+@media(max-width:860px){
+  nav{padding:14px 22px;}
+  .nav-links,.nav-hire-btn{display:none;}
+  .nav-hamburger{display:flex;}
+  .hero{flex-direction:column;align-items:flex-start;padding:88px 22px 56px;gap:32px;min-height:auto;}
+  .hero-photo-panel{width:100%;gap:13px;flex-wrap:wrap;}
+  .photo-frame{width:clamp(180px,52vw,270px);height:clamp(200px,62vw,330px);}
+  .hero-stats{flex-direction:row;flex-wrap:wrap;gap:9px;}
+  .stat-card{width:auto;flex:1;min-width:110px;}
+  .hero-watermark{font-size:clamp(3rem,18vw,6rem);bottom:-16px;}
+  section{padding:56px 22px;}
+  .about-grid{grid-template-columns:1fr;}
+  .about-photo-frame{aspect-ratio:4/3;max-width:290px;}
+  .projects-grid{grid-template-columns:1fr;}
+  .project-card.featured{grid-column:auto;}
+  .cv-body{grid-template-columns:1fr;}
+  .cv-col-l{border-right:none;border-bottom:1px solid #e2e8f0;}
+  .cv-hdr{gap:18px;padding:26px 22px 20px;}
+  footer{padding:20px 22px;}
+}
+@media(max-width:540px){
+  .hero{padding:78px 16px 48px;}
+  h1{font-size:clamp(3.2rem,14vw,5rem);}
+  .hero-photo-panel{flex-direction:column;}
+  .photo-frame{width:100%;height:clamp(200px,68vw,310px);}
+  .hero-stats{flex-direction:row;}
+  .stat-card{min-width:96px;}
+  section{padding:46px 16px;}
+  .about-traits{grid-template-columns:1fr 1fr;}
+  .about-photo-frame{max-width:100%;aspect-ratio:1/1;}
+  .cv-hdr{grid-template-columns:1fr;text-align:center;}
+  .cv-hdr-photo{margin:0 auto;}
+  .cv-hdr-contacts{justify-content:center;}
+  .cv-foot{flex-direction:column;text-align:center;}
+  .cv-col{padding:20px 16px;}
+  .achievements-grid{grid-template-columns:1fr 1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  footer{flex-direction:column;text-align:center;}
+  .section-line{display:none;}
+  .img-thumb{width:66px;height:52px;}
+  .project-preview{height:240px;}
+  .project-card:not(.featured) .project-preview{height:300px;}
+  .hero-cta{flex-direction:column;}
+  .btn{text-align:center;}
+  .about-btn{font-size:0.63rem;padding:12px 14px;}
+}
+@media print{
+  body>*:not(#cvModal){display:none!important;}
+  #cvModal{display:block!important;position:static!important;background:none!important;padding:0!important;}
+  .cv-modal-wrapper{max-height:none!important;box-shadow:none!important;width:100%!important;}
+  .cv-modal-bar{display:none!important;}
+  .cv-scroll{overflow:visible!important;}
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+<canvas id="particle-canvas"></canvas>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<nav>
+  <div class="nav-logo">SB / BIM</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-hire-btn">Contact Me</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="mm-link">About</a>
+  <a href="#skills" class="mm-link">Skills</a>
+  <a href="#projects" class="mm-link">Projects</a>
+  <a href="#education" class="mm-link">Education</a>
+  <a href="#contact" class="mm-link">Contact</a>
+  <a href="#contact" class="mm-link mobile-hire-link">Hire Me</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag"><span class="pulse-dot"></span>Available for BIM Engineering Roles</div>
+    <h1><span class="glitch" data-text="SOURIN">SOURIN</span><br><span class="accent">BANER</span><span class="accent2">JEE</span></h1>
+    <p class="hero-desc">Civil engineer specialising in BIM modelling, structural analysis, and engineering automation. Bridging Revit-based BIM with Python-powered design workflows and structural computation engines.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#about" class="btn btn-outline">About Me</a>
+    </div>
+  </div>
+  <div class="hero-watermark">STRUCTURAL</div>
+  <div class="hero-photo-panel">
+    <div class="photo-frame">
+      <img src="Portfolio images/Finalhero.png" alt="Sourin Banerjee">
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card fade-in"><div class="stat-num" data-target="8" data-suffix="+">G+8</div><div class="stat-label">RCC Building in Revit</div></div>
+      <div class="stat-card fade-in"><div class="stat-num" data-target="22" data-suffix="m">22m</div><div class="stat-label">Steel Truss Span</div></div>
+      <div class="stat-card fade-in"><div class="stat-num" data-target="811" data-decimal="2">8.11</div><div class="stat-label">CGPA — JU</div></div>
+    </div>
+  </div>
+  <div class="hero-bg-circle"></div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ABOUT ME -->
+<section id="about" class="about-section">
+  <div class="section-header"><span class="section-num">00</span><h2>ABOUT ME</h2><div class="section-line"></div></div>
+  <div class="about-grid">
+    <div class="about-photo-col">
+      <div class="about-photo-frame">
+        <img src="Portfolio images/myself.png" alt="Sourin Banerjee — BIM Engineer">
+      </div>
+      <div class="about-chips">
+        <div class="about-chip"><span class="ci">📍</span> Kolkata, West Bengal</div>
+        <div class="about-chip"><span class="ci">🎂</span> 26 Years Old</div>
+        <div class="about-chip"><span class="ci">🎓</span> B.E. Civil — JU 8.11 CGPA</div>
+        <div class="about-chip"><span class="ci">💼</span> Immediate Joiner</div>
+      </div>
+      <button class="about-btn about-btn-outline" onclick="document.getElementById('cvModal').classList.add('active')">
+        👁&nbsp; Preview Resume
+      </button>
+      <button class="about-btn about-btn-primary" onclick="downloadCV()">
+        ⬇&nbsp; Download CV
+      </button>
+    </div>
+    <div class="about-content fade-in">
+      <div class="about-quote">
+        <strong>"Turning drawings into intelligent models.</strong><br>
+        Automating today for a smarter tomorrow."
+      </div>
+      <div class="about-intro">
+        I'm <b>Sourin Banerjee</b>, a Civil &amp; Structural Engineer with a strong foundation in <b>Building Information Modelling (BIM)</b>, structural drafting, and workflow automation. I graduated from <b>Jadavpur University</b> with a CGPA of 8.11, bringing both academic rigour and hands-on project experience to every engagement.<br><br>
+        I enjoy transforming raw design data into intelligent 3D BIM models in <b>Autodesk Revit</b>, coordinating structural systems, and building <b>Python-powered automation tools</b> that eliminate repetitive engineering tasks — saving time, reducing errors, and improving project accuracy.<br><br>
+        My work spans G+8 RCC office buildings, industrial steel workshop GA drawings, and a fully coded <b>RC beam design engine (Opti Beam)</b> that writes colour-coded results directly to Excel. I bring a rare combination of structural knowledge and programming ability to every project.
+      </div>
+      <div class="about-traits">
+        <div class="trait-card fade-in">
+          <span class="trait-icon">🏗️</span>
+          <div class="trait-title">BIM Modeller</div>
+          <div class="trait-desc">Revit-based 3D BIM models for RCC and steel structures, from foundations to roof level.</div>
+        </div>
+        <div class="trait-card fade-in">
+          <span class="trait-icon">🐍</span>
+          <div class="trait-title">Automation Engineer</div>
+          <div class="trait-desc">Python + xlwings + openpyxl scripts that automate design checks, reports, and Excel workflows.</div>
+        </div>
+        <div class="trait-card fade-in">
+          <span class="trait-icon">📐</span>
+          <div class="trait-title">Structural Designer</div>
+          <div class="trait-desc">IS 456 / IS 800 — RC beam design, steel truss analysis, load calculations and documentation.</div>
+        </div>
+        <div class="trait-card fade-in">
+          <span class="trait-icon">📊</span>
+          <div class="trait-title">Detail-Oriented</div>
+          <div class="trait-desc">Quantity takeoff, BOQ preparation, technical reporting and drawing standards compliance.</div>
+        </div>
+      </div>
+      <div class="about-highlights">
+        <div class="about-hl">State Rank 2nd — WB-JELET Civil Engineering Lateral Entry Examination</div>
+        <div class="about-hl">All India Rank 10 — KIIT University; AIR 13 — IEM-JEE Entrance Examination</div>
+        <div class="about-hl">All India Rank 328 — CEED 2023 (Common Entrance Exam for Design)</div>
+        <div class="about-hl">Built Opti Beam — Python IS 456 LSM beam design engine with Excel automation</div>
+        <div class="about-hl">BIM Fundamentals for Engineers — L&amp;T EduTech × Coursera (May 2026)</div>
+        <div class="about-hl">Google UX Design Professional Certificate — Google × Coursera</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CV MODAL -->
+<div class="cv-modal-overlay" id="cvModal">
+  <div class="cv-modal-wrapper">
+    <div class="cv-modal-bar">
+      <button class="cv-btn cv-btn-p" onclick="downloadCV()">⬇ Download PDF</button>
+      <button class="cv-btn cv-btn-o" onclick="printCV();event.stopPropagation();">🖨 Print</button>
+      <button class="cv-btn cv-btn-x" onclick="document.getElementById('cvModal').classList.remove('active')">✕ Close</button>
+    </div>
+    <div class="cv-scroll">
+      <div class="cv-doc">
+        <div class="cv-hdr">
+          <img class="cv-hdr-photo" src="Portfolio images/myself.png" alt="Sourin Banerjee">
+          <div>
+            <div class="cv-hdr-name">SOURIN BANERJEE</div>
+            <div class="cv-hdr-role">BIM Engineer &middot; Civil &amp; Structural Designer &middot; Python Automation</div>
+            <div class="cv-hdr-contacts">
+              <span class="cv-hdr-c">📞 +91 6295423985</span>
+              <span class="cv-hdr-c">✉ sourinbanerjee007@gmail.com</span>
+              <span class="cv-hdr-c">🌐 sourinbanerjee.com</span>
+              <span class="cv-hdr-c">📍 Jaynagar, South 24 Pgs, WB 743372</span>
+              <span class="cv-hdr-c">🔗 linkedin.com/in/sourin-banerjee-b6704b213</span>
+            </div>
+          </div>
+        </div>
+        <div class="cv-body">
+          <div class="cv-col cv-col-l">
+            <div class="cv-st">Professional Summary</div>
+            <div class="cv-summary">Civil &amp; Structural Engineer specialising in Revit-based BIM modelling, structural drafting, and Python automation. Jadavpur University graduate (CGPA 8.11) with ability to build intelligent 3D models, produce coordinated GA drawings, and automate design workflows. Combines engineering rigour with programming skills to deliver accurate, efficient, and well-documented project outputs.</div>
+
+            <div class="cv-st">Projects</div>
+            <div class="cv-exp">
+              <div class="cv-exp-t">G+8 RCC Office Building — Revit BIM Model</div>
+              <div class="cv-exp-o">BIM MODELLING · REVIT 2026 · 2021–2022</div>
+              <div class="cv-exp-d">Full structural BIM model (foundation to mumty) in Revit 2026. Structural plans, 3D views, elevations, sections, grid plan at 1:100 scale. Reinforcement detailing and curtain wall coordination across all floors.</div>
+            </div>
+            <div class="cv-exp">
+              <div class="cv-exp-t">Workshop Building GA — Howrah</div>
+              <div class="cv-exp-o">STEEL STRUCTURE · REVIT · 2021</div>
+              <div class="cv-exp-d">GA drawings of a steel industrial workshop. Bolted roof truss, ISA 80×80×6 members, gusset plate joint details (A/B/E/G/K/N), ISMC 175 channel purlins, GI sheet fixings and full building elevations.</div>
+            </div>
+            <div class="cv-exp">
+              <div class="cv-exp-t">Opti Beam — RC Beam Design Engine</div>
+              <div class="cv-exp-o">PYTHON AUTOMATION · xlwings · openpyxl · 2026</div>
+              <div class="cv-exp-d">Python engine implementing IS 456 LSM for single/double reinforced beam design and audit. Writes colour-coded results to Excel. Neutral axis iterations, wastage %, efficiency scores and tension bar schedules.</div>
+            </div>
+
+            <div class="cv-st">Education</div>
+            <div class="cv-edu">
+              <div class="cv-edu-d">B.E. — Civil Engineering</div>
+              <div class="cv-edu-s">Jadavpur University, Kolkata · 2019–2022</div>
+              <div class="cv-edu-g">CGPA: 8.11 / 10</div>
+            </div>
+            <div class="cv-edu">
+              <div class="cv-edu-d">Diploma — Civil Engineering</div>
+              <div class="cv-edu-s">JLD College of Engineering &amp; Management · 2016–2019</div>
+              <div class="cv-edu-g">CGPA: 8.0 / 10</div>
+            </div>
+            <div class="cv-edu">
+              <div class="cv-edu-d">Higher Secondary Certificate — Science (PCM)</div>
+              <div class="cv-edu-s">Jaynagar Institution · 2014–2016</div>
+              <div class="cv-edu-g">56.6%</div>
+            </div>
+          </div>
+          <div class="cv-col">
+            <div class="cv-st">Technical Skills</div>
+            <div class="cv-sg">
+              <div class="cv-sg-n">BIM &amp; CAD Software</div>
+              <div class="cv-pills">
+                <span class="cv-pill">Autodesk Revit 2026</span>
+                <span class="cv-pill">AutoCAD</span>
+                <span class="cv-pill">STAAD Pro</span>
+                <span class="cv-pill">BIM Coordination</span>
+                <span class="cv-pill">Clash Detection</span>
+              </div>
+            </div>
+            <div class="cv-sg">
+              <div class="cv-sg-n">Programming &amp; Automation</div>
+              <div class="cv-pills">
+                <span class="cv-pill">Python</span>
+                <span class="cv-pill">xlwings</span>
+                <span class="cv-pill">openpyxl</span>
+                <span class="cv-pill">Microsoft Excel</span>
+                <span class="cv-pill">VS Code</span>
+                <span class="cv-pill">Report Automation</span>
+              </div>
+            </div>
+            <div class="cv-sg">
+              <div class="cv-sg-n">Structural Engineering</div>
+              <div class="cv-pills">
+                <span class="cv-pill">RC Beam Design (LSM)</span>
+                <span class="cv-pill">Steel Truss Analysis</span>
+                <span class="cv-pill">IS 456 / IS 800</span>
+                <span class="cv-pill">Load Calculations</span>
+                <span class="cv-pill">Foundation Design</span>
+                <span class="cv-pill">QTO / BOQ</span>
+              </div>
+            </div>
+            <div class="cv-sg">
+              <div class="cv-sg-n">Documentation &amp; Professional</div>
+              <div class="cv-pills">
+                <span class="cv-pill">Quantity Surveying</span>
+                <span class="cv-pill">Estimation &amp; Costing</span>
+                <span class="cv-pill">Technical Reporting</span>
+                <span class="cv-pill">Drawing Standards</span>
+                <span class="cv-pill">Attention to Detail</span>
+                <span class="cv-pill">Problem Solving</span>
+              </div>
+            </div>
+
+            <div class="cv-st">Certifications</div>
+            <div class="cv-ach">BIM Fundamentals for Engineers — L&amp;T EduTech × Coursera (May 2026)</div>
+            <div class="cv-ach">Autodesk Revit — Structural Modelling (Practical Project Experience)</div>
+            <div class="cv-ach">Python for Engineering Automation — Self-taught, Opti Beam Project</div>
+            <div class="cv-ach">Google UX Design Certificate — Google × Coursera</div>
+
+            <div class="cv-st">Achievements</div>
+            <div class="cv-ach">State Rank 2nd — WB-JELET Civil Engineering Lateral Entry</div>
+            <div class="cv-ach">All India Rank 10 — KIIT University Entrance Examination</div>
+            <div class="cv-ach">All India Rank 13 — IEM-JEE Entrance Examination</div>
+            <div class="cv-ach">All India Rank 328 — CEED 2023 - IIT Bombay (Common Entrance Exam for Design)</div>
+            <div class="cv-ach">Inter-School Cricket U18 — Runner-up</div>
+
+            <div class="cv-st">Contact</div>
+            <div class="cv-ach">+91 6295423985 · sourinbanerjee007@gmail.com</div>
+            <div class="cv-ach">linkedin.com/in/sourin-banerjee-b6704b213</div>
+            <div class="cv-ach">Baharu, Jaynagar, South 24 Pgs, West Bengal 743372</div>
+          </div>
+        </div>
+        <div class="cv-foot">
+          <span>SOURIN BANERJEE — BIM ENGINEER · CIVIL ENGINEER · PYTHON DEVELOPER</span>
+          <span>Available for immediate joining · 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- SKILLS -->
+<section id="skills" class="skills-section">
+  <div class="section-header"><span class="section-num">01</span><h2>SKILL SET</h2><div class="section-line"></div></div>
+  <div class="skills-grid">
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">BIM &amp; CAD Software</div>
+      <div class="skill-tags">
+        <span class="skill-tag hot">Autodesk Revit</span>
+        <span class="skill-tag">AutoCAD</span>
+        <span class="skill-tag">STAAD Pro</span>
+        <span class="skill-tag">BIM Coordination</span>
+        <span class="skill-tag">Clash Detection</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">Programming &amp; Automation</div>
+      <div class="skill-tags">
+        <span class="skill-tag hot">Python</span>
+        <span class="skill-tag hot">xlwings</span>
+        <span class="skill-tag hot">openpyxl</span>
+        <span class="skill-tag">VS Code</span>
+        <span class="skill-tag">Report Automation</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">Structural Engineering</div>
+      <div class="skill-tags">
+        <span class="skill-tag">RC Beam Design (LSM)</span>
+        <span class="skill-tag">Steel Truss Analysis</span>
+        <span class="skill-tag">IS 456 / IS 800</span>
+        <span class="skill-tag">Load Calculations</span>
+        <span class="skill-tag">Foundation Design</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">Documentation</div>
+      <div class="skill-tags">
+        <span class="skill-tag hot">Microsoft Excel</span>
+        <span class="skill-tag">Quantity Surveying</span>
+        <span class="skill-tag">Estimation &amp; Costing</span>
+        <span class="skill-tag">Technical Reporting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header"><span class="section-num">02</span><h2>PROJECTS</h2><div class="section-line"></div></div>
+  <div class="projects-grid">
+
+    <div class="project-card featured fade-in">
+      <div class="project-card-header">
+        <span class="project-type type-bim">BIM Modelling — Revit</span>
+        <span class="project-year">2021 – 2022</span>
+      </div>
+      <div class="project-preview"><img src="Portfolio images/g8_revit_bim_hero.svg" alt="G+8 BIM Project"></div>
+      <div class="img-gallery">
+        <div class="img-thumb" onclick="openLightbox('revit',0)"><img src="Portfolio images/Hero_G+8.png" alt="3D Model"></div>
+        <div class="img-thumb" onclick="openLightbox('revit',1)"><img src="Portfolio images/Structural3DGrid2.png" alt="Structural Frame"></div>
+        <div class="img-thumb" onclick="openLightbox('revit',2)"><img src="Portfolio images/Front.png" alt="Elevation"></div>
+        <div class="img-thumb" onclick="openLightbox('revit',3)"><img src="Portfolio images/3DFloor.png" alt="3D Floor"></div>
+        <div class="img-thumb" onclick="openLightbox('revit',4)"><img src="Portfolio images/reinforce.png" alt="Reinforcement"></div>
+        <div class="img-thumb" onclick="openLightbox('revit',5)"><img src="Portfolio images/FrontHanddraw.jpeg" alt="Sketch"></div>
+        <div class="img-thumb" onclick="openLightbox('revit',6)"><img src="Portfolio images/SectionElevationHanddrawm.jpeg" alt="Section Sketch"></div>
+      </div>
+      <div class="project-body">
+        <div class="project-title">G+8 RCC OFFICE BUILDING — REVIT BIM MODEL</div>
+        <p class="project-desc">Full BIM model of a G+8 reinforced concrete office building in Autodesk Revit 2026. Structural plans from foundation to mumty level, 3D views, elevations, sections and grid coordination.</p>
+        <ul class="project-highlights">
+          <li>Structural plans for Foundation, GF, 1st–7th Floor, Roof &amp; Mumty levels</li>
+          <li>Full 3D model with RCC columns, beams, slabs &amp; isolated footings</li>
+          <li>North, South, East, West elevations with curtain wall glazing</li>
+          <li>Section views with internal floor-by-floor office furniture layout</li>
+          <li>Coordinated grid plan at 1:100 scale</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-pill">Revit 2026</span>
+          <span class="tech-pill">Structural Plans</span>
+          <span class="tech-pill">3D BIM</span>
+          <span class="tech-pill">Elevations</span>
+          <span class="tech-pill">Sections</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <div class="project-card-header">
+        <span class="project-type type-steel">Steel Structure — Revit</span>
+        <span class="project-year">2021</span>
+      </div>
+      <div class="project-preview"><img src="Portfolio images/workshop_truss_hero.svg" alt="Truss Project"></div>
+      <div class="img-gallery">
+        <div class="img-thumb" onclick="openLightbox('workshop',0)"><img src="Portfolio images/Hero truss.png" alt="Truss"></div>
+        <div class="img-thumb" onclick="openLightbox('workshop',1)"><img src="Portfolio images/Intro.jpeg" alt="2D Sketch"></div>
+        <div class="img-thumb" onclick="openLightbox('workshop',2)"><img src="Portfolio images/Workshop.png" alt="Workshop"></div>
+        <div class="img-thumb" onclick="openLightbox('workshop',3)"><img src="Portfolio images/Gussetmain.png" alt="Joint G"></div>
+        <div class="img-thumb" onclick="openLightbox('workshop',4)"><img src="Portfolio images/Gussettop.png" alt="Joint A"></div>
+        <div class="img-thumb" onclick="openLightbox('workshop',5)"><img src="Portfolio images/G &F.jpeg" alt="Joint G &amp; F"></div>
+        <div class="img-thumb" onclick="openLightbox('workshop',6)"><img src="Portfolio images/A.jpeg" alt="Joint A"></div>
+        <div class="img-thumb" onclick="openLightbox('workshop',7)"><img src="Portfolio images/s3.jpeg" alt="Staad"></div>
+        <div class="img-thumb" onclick="openLightbox('workshop',8)"><img src="Portfolio images/s5.jpeg" alt="Staad Analysis"></div>
+        <div class="img-thumb" onclick="openLightbox('workshop',9)"><img src="Portfolio images/s11.jpeg" alt="Staad Analysis 2"></div>
+      </div>
+      <div class="project-body">
+        <div class="project-title">WORKSHOP BUILDING GA — HOWRAH</div>
+        <p class="project-desc">GA drawings of a steel industrial workshop in Revit. Includes bolted roof truss, purlin details, GI sheet fixings, and complete elevations with level markers.</p>
+        <ul class="project-highlights">
+          <li>Roof truss with ISA 80×80×6 rafter and vertical members</li>
+          <li>Joint details A, B, E, G, K, N with gusset plates and bolt patterns</li>
+          <li>ISMC 175 channel purlin with 8mm GI hook bolt fixing</li>
+          <li>Crown level @ 11m, Tie level @ 7m, Brickwork @ 3m</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-pill">Revit</span>
+          <span class="tech-pill">Steel Detailing</span>
+          <span class="tech-pill">Bolted Joints</span>
+          <span class="tech-pill">IS 800</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <div class="project-card-header">
+        <span class="project-type type-software">Python + Excel Automation</span>
+        <span class="project-year">2026</span>
+      </div>
+      <div class="project-preview"><img src="Portfolio images/optibeam_portfolio_hero_v3.svg" alt="Opti Beam Project"></div>
+      <div class="img-gallery">
+        <div class="img-thumb" onclick="openLightbox('beam',0)"><img src="Portfolio images/Input.png" alt="Input Sheet"></div>
+        <div class="img-thumb" onclick="openLightbox('beam',1)"><img src="Portfolio images/RunTerminal.png" alt="Terminal"></div>
+        <div class="img-thumb" onclick="openLightbox('beam',2)"><img src="Portfolio images/Audit.png" alt="Audit Report"></div>
+        <div class="img-thumb" onclick="openLightbox('beam',3)"><img src="Portfolio images/Audit Dashboard.png" alt="Audit Dashboard"></div>
+        <div class="img-thumb" onclick="openLightbox('beam',4)"><img src="Portfolio images/DesignReport3.png" alt="Design Report"></div>
+        <div class="img-thumb" onclick="openLightbox('beam',5)"><img src="Portfolio images/Codenain.png" alt="Main Code"></div>
+        <div class="img-thumb" onclick="openLightbox('beam',6)"><img src="Portfolio images/codemaxsteelcheck.png" alt="Max Steel Check"></div>
+        <div class="img-thumb" onclick="openLightbox('beam',7)"><img src="Portfolio images/codesafetycheck.png" alt="Safety Check"></div>
+      </div>
+      <div class="project-body">
+        <div class="project-title">OPTI BEAM — RC BEAM DESIGN ENGINE</div>
+        <p class="project-desc">Python engine implementing IS 456 LSM for single and double reinforced beam design and audit. Writes colour-coded results directly to Excel via xlwings.</p>
+        <ul class="project-highlights">
+          <li>Single &amp; double reinforced section design with neutral axis iterations</li>
+          <li>Audit mode: verifies existing beams — steel ratio, spacing, brittle failure checks</li>
+          <li>Excel Design Report + Audit Report with Pass/Fail colour coding</li>
+          <li>Wastage % and efficiency score per beam; tension steel bar schedule</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">xlwings</span>
+          <span class="tech-pill">openpyxl</span>
+          <span class="tech-pill">IS 456 LSM</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- EDUCATION -->
+<section id="education" class="education-section">
+  <div class="section-header"><span class="section-num">03</span><h2>EDUCATION</h2><div class="section-line"></div></div>
+  <div class="edu-timeline">
+    <div class="edu-item fade-in">
+      <div class="edu-year">2019 – 2022</div>
+      <div class="edu-degree">Bachelor of Engineering — Civil Engineering</div>
+      <div class="edu-school">Jadavpur University, Kolkata</div>
+      <div class="edu-gpa">CGPA: 8.11 / 10</div>
+    </div>
+    <div class="edu-item fade-in">
+      <div class="edu-year">2016 – 2019</div>
+      <div class="edu-degree">Diploma in Civil Engineering</div>
+      <div class="edu-school">JLD College of Engineering &amp; Management</div>
+      <div class="edu-gpa">CGPA: 8.0 / 10</div>
+    </div>
+    <div class="edu-item fade-in">
+      <div class="edu-year">2014 – 2016</div>
+      <div class="edu-degree">Higher Secondary Certificate — Science (PCM)</div>
+      <div class="edu-school">Jaynagar Institution</div>
+      <div class="edu-gpa">Percentage: 56.6%</div>
+    </div>
+  </div>
+  <div style="margin-top:52px;">
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.65rem;letter-spacing:2px;margin-bottom:16px;color:var(--muted);">CERTIFICATIONS</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;">
+      <div class="cert-card fade-in"><div class="cert-icon">🏗️</div><div><div class="cert-name">BIM Fundamentals for Engineers</div><div class="cert-org">L&amp;T EduTech × Coursera — May 2026</div></div></div>
+      <div class="cert-card fade-in"><div class="cert-icon">📐</div><div><div class="cert-name">Autodesk Revit — Structural Modelling</div><div class="cert-org">Practical Project Experience</div></div></div>
+      <div class="cert-card fade-in"><div class="cert-icon">🐍</div><div><div class="cert-name">Python for Engineering Automation</div><div class="cert-org">Self-taught — Opti Beam Project</div></div></div>
+      <div class="cert-card fade-in"><div class="cert-icon">🎨</div><div><div class="cert-name">Google UX Design Certificate</div><div class="cert-org">Google × Coursera — Professional Certificate</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="section-header"><span class="section-num">04</span><h2>ACHIEVEMENTS</h2><div class="section-line"></div></div>
+  <div class="achievements-grid">
+    <div class="achievement-card fade-in"><span class="achievement-icon">🥈</span><div class="achievement-title">WB-JELET CIVIL</div><div class="achievement-detail">State Rank 2nd</div></div>
+    <div class="achievement-card fade-in"><span class="achievement-icon">🏆</span><div class="achievement-title">KIIT UNIVERSITY</div><div class="achievement-detail">All India Rank 10</div></div>
+    <div class="achievement-card fade-in"><span class="achievement-icon">🎖️</span><div class="achievement-title">IEM-JEE</div><div class="achievement-detail">All India Rank 13</div></div>
+    <div class="achievement-card fade-in"><span class="achievement-icon">🎨</span><div class="achievement-title">CEED 2023</div><div class="achievement-detail">All India Rank 328 — Design Entrance</div></div>
+    <div class="achievement-card fade-in"><span class="achievement-icon">🏏</span><div class="achievement-title">CRICKET U18</div><div class="achievement-detail">Inter School Runner-up</div></div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="hero-tag" style="justify-content:center;"><span class="pulse-dot"></span>Open to Opportunities</div>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,7vw,6rem);letter-spacing:3px;margin-top:10px;">LET'S BUILD<br><span style="color:var(--accent)">TOGETHER</span></h2>
+  <p style="color:var(--muted);max-width:460px;margin:16px auto 0;font-size:0.86rem;line-height:1.85;">Looking for BIM Engineer / Revit Modeller / Structural BIM roles. Available for immediate joining.</p>
+  <div class="contact-grid">
+    <a href="mailto:sourinbanerjee007@gmail.com" class="contact-item"><div class="contact-label">Email</div><div class="contact-value">sourinbanerjee007@gmail.com</div></a>
+    <a href="tel:+916295423985" class="contact-item"><div class="contact-label">Phone</div><div class="contact-value">+91 6295423985</div></a>
+    <a href="https://www.linkedin.com/in/sourin-banerjee-b6704b213" target="_blank" class="contact-item"><div class="contact-label">LinkedIn</div><div class="contact-value">sourin-banerjee-b6704b213</div></a>
+    <div class="contact-item"><div class="contact-label">Location</div><div class="contact-value">Baharu, Jaynagar, South 24 Pgs, WB — 743372</div></div>
+    <a href="http://www.sourinbanerjee.com" target="_blank" class="contact-item"><div class="contact-label">Website</div><div class="contact-value">www.sourinbanerjee.com</div></div></a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 — SOURIN BANERJEE</p>
+  <p>BIM ENGINEER · CIVIL ENGINEER · PYTHON DEVELOPER</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <img id="lb-img" src="" alt="">
+  <div class="lb-caption" id="lb-caption"></div>
+  <div class="lb-controls">
+    <button class="lb-btn" onclick="lbPrev()">← PREV</button>
+    <span class="lb-counter" id="lb-counter"></span>
+    <button class="lb-btn" onclick="lbNext()">NEXT →</button>
+    <button class="lb-btn" onclick="closeLightbox()">✕ CLOSE</button>
+  </div>
+</div>
+
+<script>
+// ── CUSTOM CURSOR ──
+const dot = document.getElementById('cursor-dot');
+const ring = document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+function lerp(a,b,t){return a+(b-a)*t;}
+(function animCursor(){rx=lerp(rx,mx,0.12);ry=lerp(ry,my,0.12);ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animCursor);})();
+document.querySelectorAll('a,button,.skill-tag,.project-card,.contact-item,.achievement-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ring.style.width='52px';ring.style.height='52px';ring.style.borderColor='var(--accent)';dot.style.transform='translate(-50%,-50%) scale(1.8)';});
+  el.addEventListener('mouseleave',()=>{ring.style.width='32px';ring.style.height='32px';ring.style.borderColor='rgba(0,212,255,0.5)';dot.style.transform='translate(-50%,-50%) scale(1)';});
+});
+
+// ── PARTICLE CANVAS ──
+const canvas = document.getElementById('particle-canvas');
+const ctx = canvas.getContext('2d');
+let W,H,particles=[];
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+resize();
+window.addEventListener('resize',resize);
+class Particle{
+  constructor(){this.reset();}
+  reset(){
+    this.x=Math.random()*W;
+    this.y=Math.random()*H;
+    this.vx=(Math.random()-0.5)*0.35;
+    this.vy=(Math.random()-0.5)*0.35;
+    this.r=Math.random()*1.5+0.3;
+    this.alpha=Math.random()*0.5+0.1;
+    this.pulse=Math.random()*Math.PI*2;
+  }
+  update(){
+    this.x+=this.vx; this.y+=this.vy;
+    this.pulse+=0.02;
+    if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset();
+  }
+  draw(){
+    const a=this.alpha*(0.6+0.4*Math.sin(this.pulse));
+    ctx.beginPath();
+    ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(0,212,255,${a})`;
+    ctx.fill();
+  }
+}
+for(let i=0;i<90;i++)particles.push(new Particle());
+// Draw connection lines between close particles
+function drawLinks(){
+  for(let i=0;i<particles.length;i++){
+    for(let j=i+1;j<particles.length;j++){
+      const dx=particles[i].x-particles[j].x;
+      const dy=particles[i].y-particles[j].y;
+      const d=Math.sqrt(dx*dx+dy*dy);
+      if(d<110){
+        ctx.beginPath();
+        ctx.moveTo(particles[i].x,particles[i].y);
+        ctx.lineTo(particles[j].x,particles[j].y);
+        ctx.strokeStyle=`rgba(0,212,255,${0.06*(1-d/110)})`;
+        ctx.lineWidth=0.5;
+        ctx.stroke();
+      }
+    }
+  }
+}
+(function animParticles(){
+  ctx.clearRect(0,0,W,H);
+  drawLinks();
+  particles.forEach(p=>{p.update();p.draw();});
+  requestAnimationFrame(animParticles);
+})();
+
+// ── HAMBURGER ──
+const hbg = document.getElementById('hamburger');
+const mmenu = document.getElementById('mobileMenu');
+hbg.addEventListener('click', () => { hbg.classList.toggle('open'); mmenu.classList.toggle('open'); });
+document.querySelectorAll('.mm-link').forEach(l => l.addEventListener('click', () => { hbg.classList.remove('open'); mmenu.classList.remove('open'); }));
+
+// ── TYPED HERO DESCRIPTION ──
+const heroDesc = document.querySelector('.hero-desc');
+const originalText = heroDesc ? heroDesc.textContent.trim() : '';
+if(heroDesc && originalText){
+  heroDesc.textContent = '';
+  const cursor = document.createElement('span');
+  cursor.className = 'typed-cursor';
+  heroDesc.appendChild(cursor);
+  let i=0;
+  function typeIt(){
+    if(i<originalText.length){
+      cursor.insertAdjacentText('beforebegin', originalText[i]);
+      i++;
+      setTimeout(typeIt, i<30?0:Math.random()*28+8);
+    } else {
+      setTimeout(()=>{cursor.style.display='none';},2000);
+    }
+  }
+  setTimeout(typeIt, 1100);
+}
+
+// ── SECTION NUM FLASH ON ENTER ──
+const numObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const num = e.target.querySelector('.section-num');
+      if(num){num.classList.remove('flash');void num.offsetWidth;num.classList.add('flash');}
+    }
+  });
+},{threshold:0.3});
+document.querySelectorAll('section').forEach(s=>numObs.observe(s));
+
+// ── COUNTER ANIMATION for stat cards ──
+function animateCounter(el){
+  const suffix = el.dataset.suffix||'';
+  const decimal = el.dataset.decimal ? parseInt(el.dataset.decimal) : 0;
+  const raw = parseFloat(el.dataset.target||'0');
+  const start = performance.now();
+  const dur = 1400;
+  function tick(now){
+    const t = Math.min((now-start)/dur,1);
+    const ease = 1-Math.pow(1-t,3);
+    const val = raw*ease;
+    if(decimal===2){
+      el.textContent = (val/100).toFixed(2) + suffix;
+    } else {
+      el.textContent = (el.id==='stat-g8'?'G+':'') + Math.round(val) + suffix;
+    }
+    if(t<1)requestAnimationFrame(tick);
+    else{
+      if(decimal===2) el.textContent = (raw/100).toFixed(2)+suffix;
+      else el.textContent = (el.dataset.prefix||'')+raw+suffix;
+    }
+  }
+  requestAnimationFrame(tick);
+}
+// Special cases for stat cards
+const statNums = document.querySelectorAll('.stat-num[data-target]');
+const statObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el = e.target;
+      // G+8, 22m, 8.11
+      const raw = parseInt(el.dataset.target);
+      const suffix = el.dataset.suffix||'';
+      const decimal = el.dataset.decimal;
+      const start = performance.now();
+      const dur = 1200;
+      function tick(now){
+        const t=Math.min((now-start)/dur,1);
+        const ease=1-Math.pow(1-t,3);
+        const val=raw*ease;
+        if(decimal){
+          el.textContent=(val/100).toFixed(2);
+        } else if(suffix==='m'){
+          el.textContent=Math.round(val)+suffix;
+        } else if(el.dataset.target==='8'){
+          el.textContent='G+'+(Math.round(val)||'');
+        } else {
+          el.textContent=Math.round(val)+suffix;
+        }
+        if(t<1)requestAnimationFrame(tick);
+        else{
+          if(decimal) el.textContent=(raw/100).toFixed(2);
+          else if(suffix==='m') el.textContent=raw+suffix;
+          else if(el.dataset.target==='8') el.textContent='G+8';
+          else el.textContent=raw+suffix;
+        }
+      }
+      requestAnimationFrame(tick);
+      statObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.5});
+statNums.forEach(el=>statObs.observe(el));
+
+// ── ACHIEVEMENT CARD ICON POP ──
+const achObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('revealed');
+      achObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.4});
+document.querySelectorAll('.achievement-card').forEach(c=>achObs.observe(c));
+
+// ── SKILL TAG STAGGER ENTRANCE ──
+const skillObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const tags = e.target.querySelectorAll('.skill-tag');
+      tags.forEach((t,i)=>{
+        t.style.opacity='0';
+        t.style.transform='translateY(10px)';
+        setTimeout(()=>{
+          t.style.transition='opacity 0.35s ease,transform 0.35s ease';
+          t.style.opacity='1';
+          t.style.transform='translateY(0)';
+        },i*55+100);
+      });
+      skillObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.3});
+document.querySelectorAll('.skill-group').forEach(g=>skillObs.observe(g));
+
+// ── PROJECT CARD TILT ──
+document.querySelectorAll('.project-card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-0.5;
+    const y=(e.clientY-r.top)/r.height-0.5;
+    card.style.transform=`translateY(-6px) rotateY(${x*4}deg) rotateX(${-y*3}deg)`;
+    card.style.transition='transform 0.1s ease,box-shadow 0.3s';
+  });
+  card.addEventListener('mouseleave',()=>{
+    card.style.transform='translateY(0) rotateY(0) rotateX(0)';
+    card.style.transition='all 0.5s ease';
+  });
+});
+
+// ── CONTACT ITEMS STAGGER ──
+const contactObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const items = e.target.querySelectorAll('.contact-item');
+      items.forEach((it,i)=>{
+        it.style.opacity='0';
+        it.style.transform='translateY(20px)';
+        setTimeout(()=>{
+          it.style.transition='all 0.4s ease';
+          it.style.opacity='1';
+          it.style.transform='translateY(0)';
+        },i*80);
+      });
+      contactObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.2});
+document.querySelectorAll('.contact-grid').forEach(g=>contactObs.observe(g));
+
+// ── NAV ACTIVE LINK HIGHLIGHT ──
+const navLinks = document.querySelectorAll('.nav-links a');
+const sections = document.querySelectorAll('section[id]');
+const activeLinkObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      navLinks.forEach(a=>{
+        a.style.color='';
+        if(a.getAttribute('href')==='#'+e.target.id){
+          a.style.color='var(--accent)';
+        }
+      });
+    }
+  });
+},{threshold:0.4});
+sections.forEach(s=>activeLinkObs.observe(s));
+
+// ── LIGHTBOX ──
+const IMGS = {
+  revit:[
+    {src:"Portfolio images/Hero_G+8.png",caption:"3D Architectural Model"},
+    {src:"Portfolio images/Structural3DGrid2.png",caption:"3D Structural Frame"},
+    {src:"Portfolio images/Front.png",caption:"Front Elevation"},
+    {src:"Portfolio images/3DFloor.png",caption:"3D Floor Plan"},
+    {src:"Portfolio images/reinforce.png",caption:"Reinforcement"},
+    {src:"Portfolio images/FrontHanddraw.jpeg",caption:"Front Elevation Sketch"},
+    {src:"Portfolio images/SectionElevationHanddrawm.jpeg",caption:"Section Elevation Sketch"},
+  ],
+  workshop:[
+    {src:"Portfolio images/Hero truss.png",caption:"3D Truss Model"},
+    {src:"Portfolio images/Intro.jpeg",caption:"2D Truss Sketch"},
+    {src:"Portfolio images/Workshop.png",caption:"Workshop Model"},
+    {src:"Portfolio images/Gussetmain.png",caption:"3D Joint G"},
+    {src:"Portfolio images/Gussettop.png",caption:"3D Joint A"},
+    {src:"Portfolio images/G &F.jpeg",caption:"2D Joint G and F"},
+    {src:"Portfolio images/A.jpeg",caption:"2D Joint A"},
+    {src:"Portfolio images/s3.jpeg",caption:"Staad Model"},
+    {src:"Portfolio images/s5.jpeg",caption:"Staad Analysis"},
+    {src:"Portfolio images/s11.jpeg",caption:"Staad Analysis Detail"},
+  ],
+  beam:[
+    {src:"Portfolio images/Input.png",caption:"Input Sheet"},
+    {src:"Portfolio images/RunTerminal.png",caption:"Terminal While Running the Engine"},
+    {src:"Portfolio images/Audit.png",caption:"Audit Report"},
+    {src:"Portfolio images/Audit Dashboard.png",caption:"Audit Dashboard"},
+    {src:"Portfolio images/DesignReport3.png",caption:"Design Report"},
+    {src:"Portfolio images/Codenain.png",caption:"Main Backend Code"},
+    {src:"Portfolio images/codemaxsteelcheck.png",caption:"Max Steel Check Code"},
+    {src:"Portfolio images/codesafetycheck.png",caption:"Safety Check Code"},
+  ],
+};
+let curG=null,curI=0;
+function openLightbox(g,i){curG=g;curI=i;render();document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden';}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('active');document.body.style.overflow='';}
+function render(){const items=IMGS[curG];document.getElementById('lb-img').src=items[curI].src;document.getElementById('lb-caption').textContent=items[curI].caption;document.getElementById('lb-counter').textContent=(curI+1)+' / '+items.length;}
+function lbNext(){curI=(curI+1)%IMGS[curG].length;render();}
+function lbPrev(){curI=(curI-1+IMGS[curG].length)%IMGS[curG].length;render();}
+document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLightbox();});
+document.addEventListener('keydown',function(e){if(!document.getElementById('lightbox').classList.contains('active'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowRight')lbNext();if(e.key==='ArrowLeft')lbPrev();});
+
+// ── CV Download ──
+function downloadCV(){
+  const modal = document.getElementById('cvModal');
+  modal.classList.add('active');
+  
+  setTimeout(()=>{
+    const element = document.querySelector('.cv-doc');
+    const opt = {
+      margin: 0,
+      filename: 'Sourin_Banerjee_CV.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { 
+        scale: 2,
+        useCORS: true,
+        scrollX: 0,
+        scrollY: 0,
+        x:0,
+        y:0,
+        windowWidth: element.scrollWidth,
+        windowHeight: element.scrollHeight
+      },
+      jsPDF: { 
+        unit: 'px', 
+        format: [element.scrollWidth, element.scrollHeight],
+        orientation: 'portrait' 
+      }
+      
+    };
+    html2pdf().set(opt).from(element).save();
+  }, 500);
+}
+
+function printCV(){
+  var modal = document.getElementById('cvModal');
+  modal.classList.add('active');
+  setTimeout(function(){
+    window.print();
+  },300);
+}
+
+document.getElementById('cvModal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+
+// ── FADE-IN OBSERVER ──
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.07});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+document.querySelectorAll('.stat-card').forEach((el,i)=>{setTimeout(()=>el.classList.add('visible'),500+i*150);});
+
+// ── HERO WATERMARK PARALLAX ──
+const watermark = document.querySelector('.hero-watermark');
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  if(watermark) watermark.style.transform=`translateY(${y*0.15}px)`;
+});
+</script>
+</body>
+</html>
